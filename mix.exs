@@ -26,6 +26,7 @@ defmodule Statix.Mixfile do
   end
 
   defp deps() do
-    [{:ex_doc, ">= 0.0.0", only: :docs}]
+    [{:ex_doc, ">= 0.0.0", only: :docs},
+     {:plumbus, github: "cookkkie/plumbus"}]
   end
 end
