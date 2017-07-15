@@ -350,6 +350,7 @@ defmodule Statix do
     env = Keyword.merge(env1, env2)
 
     host = Keyword.get(env, :host, "127.0.0.1")
+    host = Plumbus.get_env("DD_AGENT", host, :string)
     port = Keyword.get(env, :port, 8125)
     prefix = build_prefix(prefix1, prefix2)
     {host, port, prefix}
